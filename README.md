@@ -3,16 +3,15 @@ By Balamurugan Kailasam  |  September 8, 2016 1:30 pm  |  1.69K views
 https://collab365.community/o365-spfx-using-kendoui-on-the-sharepoint-framework/
 Categories: Development, Framework
 
-One of the key drivers for the SharePoint Framework is to give developers the ability to implement SharePoint solutions using tools and languages that have become widespread in the community. In this post, we will illustrate how to utilise Kendo UI by Progress components within the SharePoint Framework client web parts.
-If you don’t know, Kendo UI is a fantastic set of controls that allows developers to build business applications by using rich UI capabilities.
-Before looking into the example, you may want to check out the following links to get a deeper undestanding of what problems Kendo UI solves:
-70+ UI components with ready to download themes.
-Out-of-the-box support with the KO
+One of the key drivers for the SharePoint Framework is to give developers the ability to implement SharePoint solutions using tools and languages that have become widespread in the community. In this post, we will illustrate how to utilise Kendo UI by Progress components within the SharePoint Framework client web parts. If you don’t know, Kendo UI is a fantastic set of controls that allows developers to build business applications by using rich UI capabilities. Before looking into the example, you may want to check out the following links to get a deeper undestanding of what problems Kendo UI solves:
 
-## NPM support
-Third-party tools support and Framework support – Require, TypeScript etc.
+70+ UI components with ready to download themes 
+   http://www.telerik.com/kendo-ui/ui-for-office-365-sharepoint 
+Out-of-the-box support with the KO 
+NPM support 
+Third-party tools support and Framework support – Require, TypeScript etc. 
 
-##Setup the SPFX environment and create a basic client web part:
+## Setup the SPFX environment and create a basic client web part:
 In this example, I have used the Drop 2 version of the SPFX components. If you have Drop 1 installed then you will need to upgrade.
 Create a new Client Webpart using Yeoman SharePoint Generator and the Knockout template option.
 
@@ -43,16 +42,16 @@ After installing Kendo UI and jQuery, the dependencies in the package.json are u
 
 ## Configure the Knockout template 
 and Properties to render the “DateCreated” property:
+
 Setup a new property “DateCreated” within the SPFX ClientWebParts within the <SPFXWebPart>WebPartProp.ts as below:
 
 1:  export interface IKendouiWebPartProps {
 2:    dateCreated: string;
 3:  }
 
-
 Amend the Knockout template to render the new “dateCreated” property as a writeable (text) and read-only(label):
 
-1:  <div data-bind="attr: {class:cssClass}">
+   1:  <div data-bind="attr: {class:cssClass}">
    2:    <div data-bind="attr: {class:containerClass}">
    3:      <div data-bind="attr: {class:rowClass}">
    4:        <div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
@@ -87,7 +86,7 @@ Import jQuery, Kendo UI Core and the Module loader
 
 Load the Kendo UI css on the constructor using the module loader.
 
-   1:  public constructor(context: IWebPartContext) {
+   1:  public constructor(context: IWebPartContext) {
    2:     super(context);
    3:     this._id = _instance++;
    4:     ...
@@ -100,9 +99,9 @@ Load the Kendo UI css on the constructor using the module loader.
 
 Overwrite the Render method to initialise the Kendo UI DatePicker control.
 
-   1:   public render(): void {
-   2:      $('#ts').kendoDatePicker();
-   3:   }
+1:   public render(): void {
+2:      $('#ts').kendoDatePicker();
+3:   }
 
 
 ## Build and deploy the package:
