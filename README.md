@@ -5,11 +5,15 @@ Categories: Development, Framework
 
 One of the key drivers for the SharePoint Framework is to give developers the ability to implement SharePoint solutions using tools and languages that have become widespread in the community. In this post, we will illustrate how to utilise Kendo UI by Progress components within the SharePoint Framework client web parts. If you don’t know, Kendo UI is a fantastic set of controls that allows developers to build business applications by using rich UI capabilities. Before looking into the example, you may want to check out the following links to get a deeper undestanding of what problems Kendo UI solves:
 
-70+ UI components with ready to download themes 
+**Why it makes sense to use Kendo UI:**
+-	70+ responsive UI components that integrate with the SharePoint REST API.
    http://www.telerik.com/kendo-ui/ui-for-office-365-sharepoint 
-Out-of-the-box support with the KO 
-NPM support 
-Third-party tools support and Framework support – Require, TypeScript etc. 
+-	Built-in Office 365 theme.
+-	Built-in export functionality to most common office formats, such as Excel, PDF and image files.
+-	Compliance with widely-recognized accessibility standards (WAI-ARIA, WCAG 2.0 and Section 508).
+-  Out-of-the-box support with the KO 
+-  NPM support 
+-  Third-party tools support and Framework support – Require, TypeScript etc. 
 
 ## Setup the SPFX environment and create a basic client web part:
 In this example, I have used the Drop 2 version of the SPFX components. If you have Drop 1 installed then you will need to upgrade.
